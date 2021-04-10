@@ -1,0 +1,11 @@
+<h1>See all our restaurants:</h1>
+
+<ul>
+  <% @restaurants.each do |restaurant| %>
+     <!-- `restaurant` is an instance of our Restaurant class! -->
+    <li><%= link_to restaurant.name, restaurant_path(restaurant) %></li>
+  <% end %>
+</ul>
+
+
+<%= link_to 'Add a new restaurant', restaurants_new_path %>

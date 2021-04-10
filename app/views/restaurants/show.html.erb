@@ -1,0 +1,9 @@
+<h1>Details about <%= @restaurant.name %></h1>
+
+<p>Address: <%= @restaurant.address %></p>
+<p>Rating: <%= @restaurant.rating %></p>
+
+<!-- you can use `lt` + tab for short to get the link_to helper -->
+<%= link_to 'Edit this restaurant', edit_restaurant_path(@restaurant)  %>
+<%= link_to 'Delete this restaurant', restaurant_path(@restaurant), method: :delete  %>
+<%= link_to 'All restaurants', restaurants_path  %>
